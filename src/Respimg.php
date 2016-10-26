@@ -235,7 +235,7 @@
 		public function smartResize($columns, $rows, $optim = false) {
 
 			$this->setOption('filter:support', '2.0');
-			$this->thumbnailImage($columns, $rows, true, false, \Imagick::FILTER_TRIANGLE);
+			$this->thumbnailImage($columns, $rows, true, false, \Imagick::FILTER_LANCZOS);
 			if ($optim) {
 				$this->unsharpMaskImage(0.25, 0.08, 8.3, 0.045);
 			} else {
