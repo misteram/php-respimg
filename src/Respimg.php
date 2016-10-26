@@ -232,10 +232,13 @@
 		 * @param	bool	$optim			Whether you intend to perform optimization on the resulting image. Note that setting this to `true` doesn’t actually perform any optimization.
 		 */
 
-		public function smartResize($columns, $rows, $optim = false) {
+		public function smartResize($columns, $rows, $optim = false, $crop = false) {
 
 			$this->setOption('filter:support', '2.0');
 			$this->thumbnailImage($columns, $rows, true, false, \Imagick::FILTER_LANCZOS);
+			if ($crop) {
+				$this->cropThumbnailImage($columns, $rows);
+			}	
 			if ($optim) {
 				$this->unsharpMaskImage(0.25, 0.08, 8.3, 0.045);
 			} else {
