@@ -230,12 +230,14 @@
 		 * @param	integer	$columns		The number of columns in the output image. 0 = maintain aspect ratio based on $rows.
 		 * @param	integer	$rows			The number of rows in the output image. 0 = maintain aspect ratio based on $columns.
 		 * @param	bool	$optim			Whether you intend to perform optimization on the resulting image. Note that setting this to `true` doesn’t actually perform any optimization.
+		 * @param	bool	$bestfit		
+		 * @param	bool	$crop			
 		 */
 
-		public function smartResize($columns, $rows, $optim = false, $crop = false) {
+		public function smartResize($columns, $rows, $optim = false, $bestfit = false, $crop = false) {
 
 			$this->setOption('filter:support', '2.0');
-			$this->thumbnailImage($columns, $rows, true, false, \Imagick::FILTER_LANCZOS);
+			$this->thumbnailImage($columns, $rows, $bestfit, false, \Imagick::FILTER_LANCZOS);
 			if ($crop) {
 				$this->cropThumbnailImage($columns, $rows);
 			}	
