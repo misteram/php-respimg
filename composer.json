@@ -1,7 +1,7 @@
 {
     "name": "misteram/php-respimg",
     "description": "A responsive image workflow for optimizing and resizing your images",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "keywords": [
         "responsive images",
         "respimg",
@@ -11,23 +11,23 @@
         "imagick",
         "resize"
     ],
-    "homepage": "https://github.com/nwtn/php-respimg/",
+    "homepage": "https://github.com/misteram/php-respimg/",
     "license": "MIT",
     "authors": [
         {
-            "name": "David Newton",
-            "email": "david@davidnewton.ca"
+            "name": "Egor Gerasimchuk",
+            "email": "egor@mister.am"
         }
     ],
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/maxbin123/php-respimg/"
+            "type": "git",
+            "url": "https://github.com/misteram/php-respimg/"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "ext-imagick": ">=3.0.0"
+        "ext-imagick": "*"
     },
     "config": {
         "bin-dir": "bin"
