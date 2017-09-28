@@ -19,7 +19,6 @@
             "email": "david@davidnewton.ca"
         }
     ],
-    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "vcs",
