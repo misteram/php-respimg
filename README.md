@@ -11,7 +11,6 @@ Full documentation available at <https://rawgit.com/nwtn/php-respimg/master/docs
 * [PHP >= 5.3.0](http://php.net/)
 * [ImageMagick](http://imagemagick.org/)
 * [ext-imagick](http://php.net/manual/en/book.imagick.php)
-* For SVG rasterization: [jonnyw/php-phantomjs 3.1.5](https://github.com/jonnnnyw/php-phantomjs)
 * For optimization, depending on what settings you pass:
 	* [SVGO](https://github.com/svg/svgo)
 	* [image_optim](https://github.com/toy/image_optim)
@@ -85,6 +84,10 @@ nwtn\Respimg::optimize($output_path, 3, 1, 1, 1);
 ```
 
 ## Release History
+
+### 1.0.6
+* Remove phantom.js
+* Updated composer
 
 ### 1.0.1
 
